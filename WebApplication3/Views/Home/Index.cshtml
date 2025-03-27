@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Alunos</h2>
+            <p>
+                Aqui você poderá ver a lista de carros, adicionar, editar e exclui-los.
+            </p>
+            <li class="btn btn-outline-dark">@Html.ActionLink("Carros", "Index", "Carro", new { area = "" }, new { @class = "nav-link" })</li>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Celular</h2>
+            <p>Aqui você poderá ver a lista de celulares, adicionar, editar e exclui-los.</p>
+            <li class="btn btn-outline-dark">@Html.ActionLink("Celulares", "Index", "Celular", new { area = "" }, new { @class = "nav-link" })</li>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Eventos</h2>
+            <p>Aqui você poderá ver a lista de eventos, adicionar, editar e exclui-los.</p>
+            <li class="btn btn-outline-dark">@Html.ActionLink("Eventos", "Index", "Evento", new { area = "" }, new { @class = "nav-link" })</li>
+        </section>
+    </div>
+</main>
