@@ -14,6 +14,7 @@ namespace WebApplication3.Models
         public bool Novo { get; set; }
 
         [DataType(DataType.Date, ErrorMessage = "Date only")]
+        [Display(Name = "Data de lançamento")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 

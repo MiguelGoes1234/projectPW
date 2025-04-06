@@ -12,6 +12,7 @@ namespace WebApplication3.Models
         public string Local { get; set; }
         
         [DataType(DataType.Date, ErrorMessage = "Date only")]
+        [Display(Name = "Data do evento")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 

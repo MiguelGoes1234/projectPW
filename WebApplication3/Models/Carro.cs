@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,7 @@ namespace WebApplication3.Models
         public string Car {  get; set; }
 
         [DataType(DataType.Date, ErrorMessage = "Date only")]
+        [Display(Name = "Data da compra")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 
