@@ -8,6 +8,7 @@
 
 <p>
     @Html.ActionLink("Criar novo celular", "Create", null, null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Gerar PDF", "CreatePdf", null, null, new { @class = "btn btn-danger" })
 </p>
 <table class="table">
     <tr>
@@ -19,6 +20,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Novo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
         </th>
         <th></th>
     </tr>
@@ -35,8 +39,11 @@
             @Html.DisplayFor(modelItem => item.Novo)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id = Model.ToList<WebApplication3.Models.Celular>().IndexOf(item) }, new { @class = "btn btn-success" }) |
-            @Html.ActionLink("Detalhes", "Exibir", new {  id= Model.ToList<WebApplication3.Models.Celular>().IndexOf(item) }, new { @class = "btn btn-secondary" }) |
+            @Html.ActionLink("Detalhes", "Exibir", new { id = Model.ToList<WebApplication3.Models.Celular>().IndexOf(item) }, new { @class = "btn btn-secondary" }) |
             @Html.ActionLink("Delete", "Delete", new { id = Model.ToList<WebApplication3.Models.Celular>().IndexOf(item) }, new { @class = "btn btn-danger" })
         </td>
     </tr>
